@@ -2,7 +2,7 @@ map = {
     "room1": {
         "title":"Room 1",
         "loc_x":-620,
-        "loc_y":230,
+        "loc_y":220,
         "width":100,
         "height":100,
         "color":"blue"
@@ -33,4 +33,6 @@ map = {
     }
 }
 
-cur_loc = "room1"
+cur_loc = "room3"
+
+key_loc = "room2"

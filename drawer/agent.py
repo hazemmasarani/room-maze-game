@@ -2,6 +2,7 @@ import turtle
 
 # Function to draw a agent
 def draw_agent(center_x, center_y, color):
+    turtle.penup()
     # Set the fill color
     turtle.fillcolor(color)
     
@@ -17,36 +18,61 @@ def draw_agent(center_x, center_y, color):
     turtle.circle(15)
 
     # Draw the rectangle
-    turtle.left(90)   
-    for _ in range(2):
-        turtle.left(90)        # Turn left 90 degrees
-        turtle.forward(3)  # Draw the width
-        turtle.left(90)        # Turn left 90 degrees
-        turtle.forward(40) # Draw the height
+    turtle.right(90)  
 
+    for _ in range(2):
+        turtle.forward(40)  # Draw the width
+        turtle.left(90)        # Turn left 90 degrees
+        turtle.forward(3) # Draw the height
+        turtle.left(90)        # Turn left 90 degrees
+    
     turtle.penup()
-    turtle.left(180)        # Turn left 90 degrees
     turtle.forward(5)  # Draw the width
 
     # Draw the rectangle
-    turtle.left(130)   
+    turtle.right(30)   
+    turtle.pendown()
     for _ in range(2):
+        turtle.forward(20)  # Draw the width
         turtle.left(90)        # Turn left 90 degrees
-        turtle.forward(2)  # Draw the width
+        turtle.forward(2) # Draw the height
         turtle.left(90)        # Turn left 90 degrees
-        turtle.forward(20) # Draw the height
+
+    turtle.left(60) 
 
     # Draw the rectangle
-    turtle.left(90)   
     for _ in range(2):
+        turtle.forward(20)  # Draw the width
         turtle.left(90)        # Turn left 90 degrees
-        turtle.forward(2)  # Draw the width
+        turtle.forward(2) # Draw the height
         turtle.left(90)        # Turn left 90 degrees
-        turtle.forward(20) # Draw the height
 
-    # Draw the rectangle
-    turtle.left(130)   
-    turtle.forward(35)  # Draw the width
+    turtle.penup()
+    turtle.right(30)  
+    turtle.forward(35)
+    turtle.left(30)
+    turtle.pendown()
+
+    for _ in range(2):
+        turtle.forward(20)  # Draw the width
+        turtle.left(90)        # Turn left 90 degrees
+        turtle.forward(2) # Draw the height
+        turtle.left(90)        # Turn left 90 degrees
+
+    turtle.penup()
+    turtle.right(60)
+    turtle.pendown()
     
+    for _ in range(2):
+        turtle.forward(20)  # Draw the width
+        turtle.left(90)        # Turn left 90 degrees
+        turtle.forward(2) # Draw the height
+        turtle.left(90)        # Turn left 90 degrees
+
+    turtle.penup()
+
+    turtle.right(150)
+    turtle.forward(40)
+
     # End filling the color
     turtle.end_fill()
