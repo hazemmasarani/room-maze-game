@@ -1,42 +1,11 @@
 import turtle
-'''
-def draw_key(x, y, length, width):
-    # Move the turtle to the starting position
-    turtle.penup()
-    turtle.goto(x, y)
-    turtle.pendown()
-
-    # Draw the key shaft
-    turtle.forward(length)
-    turtle.right(90)
-    turtle.forward(width)
-    turtle.right(90)
-    turtle.forward(length)
-    turtle.right(90)
-    turtle.forward(width)
-    turtle.right(90)
-
-    # Draw the head of the key
-    turtle.forward(length / 4)  # Move to the end of the shaft
-    turtle.right(90)
-    turtle.forward(width)
-    turtle.left(90)
-    turtle.forward(length / 4)
-    turtle.left(90)
-    turtle.forward(width)
-    turtle.left(90)
-    turtle.forward(length / 4)
-    
-    # Move the turtle to the starting position for the next key
-    turtle.penup()
-    turtle.goto(x + 50, y)  # Adjust for the next key
-    turtle.pendown()
-
-'''
 
 def draw_key(x,y):
     x += 30
     y -= 10
+    # adjust angle to zero
+    turtle.setheading(90)
+
     # Move to the starting position
     turtle.penup()
     turtle.goto(x, y)
