@@ -15,7 +15,7 @@
    - Use the arrow keys to move.
    - Interact with objects using the spacebar.
 
-![Game Screenshot](https://link-to-your-image.com/screenshot.png)
+![Game Screenshot](https://github.com/hazemmasarani/room-maze-game/blob/main/screen_shot_1.png)
 
 
 
