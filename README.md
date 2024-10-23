@@ -12,10 +12,12 @@
 
 1. **Start the Game**: Launch from the main menu.
 2. **Controls**:
-   - Use the arrow keys to move.
-   - Interact with objects using the spacebar.
+   - Use the number keys to move.
+   - Interact with objects using the number keys.
 
 ![Game Screenshot](https://github.com/hazemmasarani/room-maze-game/blob/main/screen_shot_1.png)
+![Game Screenshot](https://github.com/hazemmasarani/room-maze-game/blob/main/screen_shot_2.png)
+![Game Screenshot](https://github.com/hazemmasarani/room-maze-game/blob/main/screen_shot_3.png)
 
 
 
