@@ -1,6 +1,6 @@
 import turtle
 
-from maze import map, cur_loc, key_loc, game_screen#, pocket_boxs
+from maze import map, cur_loc, key_loc, game_screen, get_cur_loc, get_key_loc
 
 from drawer.room import draw_room
 from drawer.agent import draw_agent
@@ -15,7 +15,8 @@ def clear_map():
     turtle.home()   # Move the turtle to the starting position
 
 def draw_map():
-
+    cur_loc = get_cur_loc()
+    key_loc = get_key_loc()
     clear_map()
 
     for room_name in map:
@@ -34,5 +35,3 @@ def draw_map():
 
     key_room = map[key_loc]
     draw_key(key_room['loc_x'], key_room['loc_y'])
-
-    # pass

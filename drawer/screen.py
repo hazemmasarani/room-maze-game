@@ -33,7 +33,7 @@ def draw_screen(center_x, center_y, width, height, color, title, text):
     turtle.write(title, align="center", font=("courier new", 16, "bold"))
 
     turtle.penup()
-    turtle.goto(center_x, center_y)  # Position the text inside the rectangle
+    turtle.goto(center_x- 50, center_y - height / 2)  # Position the text inside the rectangle
     turtle.pendown()
     turtle.color('black')  # Set text color
-    turtle.write(text, align="center", font=("courier new", 16, "bold"))
+    turtle.write(text, align="center", font=("courier new", 14, "bold"))

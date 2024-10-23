@@ -15,7 +15,7 @@ map = {
         "height":100,
         "color":"blue"
     },
-    "room3":{
+    "room3": {
         "title":"Room 3",
         "loc_x":-520,
         "loc_y":160,
@@ -67,7 +67,7 @@ map = {
 
 cur_loc = "room1"
 
-key_loc = "item1"
+key_loc = "room2"
 
 game_screen = {
     "title":"Screen",
@@ -79,6 +79,21 @@ game_screen = {
     "color": "orange"
 }
 
+def set_key_loc(loc):
+    global key_loc
+    key_loc = loc
+
+def get_key_loc():
+    global key_loc
+    return key_loc
+
+def set_cur_loc(loc):
+    global cur_loc
+    cur_loc = loc
+
+def get_cur_loc():
+    global cur_loc
+    return cur_loc
 
 pocket_queue = []
 listeners = []
