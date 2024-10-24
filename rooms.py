@@ -1,6 +1,6 @@
 import turtle
 
-from maze import cur_loc, listeners, game_screen, pocket_queue, key_loc, get_cur_loc, set_cur_loc, set_key_loc, get_key_loc
+from maze import listeners, game_screen, pocket_queue, get_cur_loc, set_cur_loc, set_key_loc, get_key_loc
 
 from drawer.draw import draw_map
 
@@ -33,24 +33,22 @@ def room1():
 
 def room2():
     global game_screen, pocket_queue, listeners
-    if get_cur_loc() == "room2" or "key_room5" in pocket_queue :
+    set_cur_loc("room2")
+
+    for l in listeners:
+        screen.onkey(None, l)
+
+    screen.onkey(room1, "1")
+    listeners.append("1")
+    screen.onkey(room4, "2")
+    listeners.append("2")
+
+    if get_key_loc() != "room2" :
         game_screen['text'] = """
             Please press the sutable button to change room.
             1) Room 1
             2) Room 4
         """
-        set_cur_loc( "room2")
-        set_key_loc("item1")
-
-        for l in listeners:
-            screen.onkey(None, l)
-
-        screen.onkey(room1, "1")
-        listeners.append("1")
-        screen.onkey(room4, "2")
-        listeners.append("2")
-        pocket_queue.append("key_room5")
-
     else:
         game_screen['text'] = """
             Please press the sutable button to change room.
@@ -58,20 +56,32 @@ def room2():
             2) Room 4
             3) Pick up room 5 key
         """
-        set_cur_loc("room2")
-
-        for l in listeners:
-            screen.onkey(None, l)
-
-        screen.onkey(room1, "1")
-        listeners.append("1")
-        screen.onkey(room4, "2")
-        listeners.append("2")
-        screen.onkey(room2, "3")
+        screen.onkey(pick_room_5_key, "3")
         listeners.append("3")
 
     draw_map()
- 
+
+def pick_room_5_key():
+    
+    game_screen['text'] = """
+        Please press the sutable button to change room.
+        1) Room 1
+        2) Room 4
+    """
+    set_cur_loc( "room2")
+    set_key_loc("item1")
+
+    for l in listeners:
+        screen.onkey(None, l)
+
+    screen.onkey(room1, "1")
+    listeners.append("1")
+    screen.onkey(room4, "2")
+    listeners.append("2")
+    pocket_queue.append("key_room5")
+    
+    draw_map()
+
 def room3():
     global game_screen, pocket_queue, listeners
 

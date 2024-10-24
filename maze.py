@@ -65,9 +65,9 @@ map = {
     }
 }
 
-cur_loc = "room1"
+cur_loc = "room1" # for the agent
 
-key_loc = "room2"
+key_loc = "room2" # for the key
 
 game_screen = {
     "title":"Screen",
